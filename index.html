@@ -5,24 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Bhaskara</title>
     <style>
+        body{
+            background-color: #202126;
+        }
+        main{
+            text-align: center;
+            background-color:#4e4f55;
+            width: 500px;
+            height: 560px;
+            margin: auto;
+            padding: 10px;
+            box-shadow: 3px 3px 20px rgba(49, 47, 47, 0.473); 
+            border-radius: 30px;
+        }
         input{
             text-align: center;
+            border-radius: 10px;
+            height: 30px;
+            width: 60pt;
+            
         }
+        #calcular{
+            padding-top: 10px;
+            
+        }
+        
         div#res{
             font: bold 40px Arial;
             font-size: 40px;
             font-family:'Times New Roman', Times, serif;
         }
+        h1{
+            font: bold ;
+        }
+        
     </style>
 </head>
 <body>
-    <h1>Cálculo de Delta</h1>
-    <h2>f(x) = ax²*bx*c</h2>
+    <main>
+    <h1>Calculadora de Delta</h1>
+    <h2>f(x) = ax² bx c</h2><br>
     <input type="text" placeholder="a" name="txtn1" id="txtn1" size="5">
     <input type="text" placeholder="b" name="txtn2" id="txtn2" size="5">
     <input type="text" placeholder="c" name="txtn3" id="txtn3" size="5">
+
+   <div id="calcular">
     <input type="button" value="Calcular" onclick="calcular()">
+    </div>
     <div id="res">Resultado</div>
+    
 
     <script>
         function calcular(){
@@ -33,21 +64,25 @@
             var n1 = Number(tn1.value)
             var n2 = Number(tn2.value)
             var n3 = Number(tn3.value)
-            var delta = (n3**2)-4*n1*n3
-            var deltax = delta**0.5
-            var X1 = (-n2 + deltax) /(2*n1)
-            var X2 = (-n2 - deltax)/(2*n1)
+            var delta = (n2**2)-4*n1*n3
+
             res.innerHTML = `Δ = ${delta}`
             if(delta < 0){
                 res.innerHTML = `Delta é negativo. <br> 
                 Δ = ${delta}`
                 
             }else{
-                 res.innerHTML = `Δ = ${delta} <br>
-                 x¹ = ${X1} <br>
-                 x² = ${X2}`
+                res.innerHTML = `Δ = ${delta} <br>
+                 x¹ = ${(-(n2) + (delta**0.5)) /(2*n1)} <br>
+                 x² = ${(-(n2) - (delta**0.5))/(2*n1)}`;
             }
+                
+            
+
+        }
+    
     </script>
+    </main>
 
 
 </body>
