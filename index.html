@@ -33,8 +33,10 @@
             var n1 = Number(tn1.value)
             var n2 = Number(tn2.value)
             var n3 = Number(tn3.value)
-            var delta = (n3**2)-4*n1*n2
-            var deltax = delta**1/2
+            var delta = (n3**2)-4*n1*n3
+            var deltax = delta**0.5
+            var X1 = (-n2 + deltax) /(2*n1)
+            var X2 = (-n2 - deltax)/(2*n1)
             res.innerHTML = `Δ = ${delta}`
             if(delta < 0){
                 res.innerHTML = `Delta é negativo. <br> 
@@ -42,10 +44,9 @@
                 
             }else{
                  res.innerHTML = `Δ = ${delta} <br>
-                X¹ = ${(-n2 + deltax) /2*n1} <br>
-                X² = ${(n2 - deltax)/2*n1}`
+                 x¹ = ${X1} <br>
+                 x² = ${X2}`
             }
-        }
     </script>
 
 
