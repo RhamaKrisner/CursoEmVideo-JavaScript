@@ -14,9 +14,10 @@
             width: 290px;
             height: 560px;
             margin: auto;
-            padding: 10px;
-            box-shadow: 3px 3px 20px rgba(49, 47, 47, 0.473); 
             border-radius: 30px;
+            background: linear-gradient(145deg, #1d1e22, #222329);
+            box-shadow:  28px 28px 57px #0d0d0f, 
+             -28px -28px 57px #33353d;
         }
         input{
             text-align: center;
@@ -43,16 +44,20 @@
 </head>
 <body>
     <main>
+        <form>
     <h1>Calculadora de Bhaskara</h1>
     <h2>f(x) = ax² bx c</h2><br>
     <input type="number" placeholder="a" name="txtn1" id="txtn1" size="5">
     <input type="number" placeholder="b" name="txtn2" id="txtn2" size="5">
     <input type="number" placeholder="c" name="txtn3" id="txtn3" size="5">
 
+
    <div id="calcular">
     <input type="button" value="Calcular" onclick="calcular()">
+    <input type="reset" value="Limpar" onclick="limpar() ">
     </div>
     <div id="res">Resultado</div>
+    </form>
     
 
     <script>
