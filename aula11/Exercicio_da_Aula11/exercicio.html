@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+    <style>
+        body{
+            background-color: rgb(54, 51, 51);
+            text-align: center;
+        }
+        main{
+            height: 550px;
+            width: 400px;
+            text-align: center;
+            background-color: cadetblue;
+            border-radius: 40px;
+        }
+        div{
+            text-align: left;
+            padding-left: 20px;
+            padding-top: 5px;
+        }  
+        div#res{
+            font:bold 20pt Arial;
+        } 
+        div#button{
+            text-align: center;
+        }      
+        
+        p{
+            font: bold 30px Arial;
+            text-align: left;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <h1>Validação de País</h1>
+        <div id="nome">
+            Digite seu nome: <input type="text" name="nome" id="nome">
+        </div>
+        <div id="pais">
+            Digite seu pais:&nbsp;&nbsp; <input type="text" name="pais" id="pais">
+        </div>
+        <div id="button">
+             <input type="button" value="Conferir" onclick="conferir()">
+             
+        </div>
+        <div id="res">Resultado:</div>
+    </main>
+
+    <script>
+
+        function conferir(){
+            var pais = document.querySelector('div#pais')
+            //var pais = document.querySelector('div#pais')
+            var nome = document.querySelector('div#nome')
+            var res = document.querySelector('div#res')
+
+            res.innerHTML = `Você nasceu em ${pais}`
+        }
+    
+
+    </script>
+</body>
+</html>
