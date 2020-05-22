@@ -4,4 +4,4 @@ do{
     console.log(`Passo ${contador}`)
     contador++
 
-} while(contador <= 6)
+} while(contador <= 2)
