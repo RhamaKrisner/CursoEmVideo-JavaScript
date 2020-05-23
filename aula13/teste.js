@@ -1,7 +1,8 @@
 var contador = 1
+var num = 1
 
-do{
-    console.log(`Passo ${contador}`)
+while(contador <= 10){
+    console.log(`${contador} * ${num} = ${contador*num}`)
     contador++
 
-} while(contador <= 2)
+}
