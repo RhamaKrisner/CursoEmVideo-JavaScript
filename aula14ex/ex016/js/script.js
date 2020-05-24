@@ -1,9 +1,12 @@
-function contador(){
+function contar(){
     var inicio = document.getElementById('inicioNumero')
     var fim = document.getElementById('fimNumero')
     var passo = document.getElementById('passoNumero')
     var msg = document.getElementById('contando')
-    for(inicio = 'inicioNumero';fim <= 'fimNumero'; passo = 'passoNumero' ){
-        msg.innerHTML = `${inicio <= fim}`
+    var res = document.getElementById('res')
+    
+    res.innerHTML = while(inicio <= fim){
+        res.innerHTML = `${inicio}`
+        inicio+=passo
     }
 }
