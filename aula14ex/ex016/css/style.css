@@ -32,11 +32,13 @@ div{
     padding: 5px;
 
 }
-input[type=button]{
-    width: 80pt;
-    height: 25pt;
+input[type=submit]{
+    width: 90pt;
+    height: 30pt;
     margin-left: 180px;
+    text-align: center;
     font: bold 20pt black;
+    cursor: pointer;
     
 }
 

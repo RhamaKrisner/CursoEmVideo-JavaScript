@@ -5,8 +5,8 @@ function contar(){
     var msg = document.getElementById('contando')
     var res = document.getElementById('res')
     
-    res.innerHTML = while(inicio <= fim){
-        res.innerHTML = `${inicio}`
+    while(inicio <= fim){
+      res.innerHTML = document.write(inicio)
         inicio+=passo
     }
 }
