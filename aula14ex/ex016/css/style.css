@@ -21,9 +21,11 @@ section{
     background: white;
     border-radius: 60px;
     padding: 15px;
-    width: 500px;
+    width: 300px;
     margin: auto;
     border-radius: 30px;
+    word-wrap: break-word;
+    break-inside: auto;
     
 }
 div{
@@ -32,10 +34,11 @@ div{
     padding: 5px;
 
 }
-input[type=submit]{
+
+input[type=button]{
     width: 90pt;
     height: 30pt;
-    margin-left: 180px;
+    margin-left: 80px;
     text-align: center;
     font: bold 20pt black;
     cursor: pointer;
