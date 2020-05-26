@@ -1,12 +1,12 @@
 function contar(){
-    var inicio = document.getElementById('inicioNumero')
-    var fim = document.getElementById('fimNumero')
-    var passo = document.getElementById('passoNumero')
-    var msg = document.getElementById('contando')
+    var inicio = Number(document.getElementById('inicioNumero').value)
+    var fim = Number(document.getElementById('fimNumero').value)
+    var passo = Number(document.getElementById('passoNumero').value)
     var res = document.getElementById('res')
     
-    while(inicio <= fim){
-      res.innerHTML = document.write(inicio)
-        inicio+=passo
+    for(var i = 0; i <= fim; i+= passo){
+      res+=(`=>${i}`)
     }
+    var res = document.getElementById('res').innerText
+
 }
