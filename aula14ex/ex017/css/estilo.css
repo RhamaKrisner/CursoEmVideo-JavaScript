@@ -23,7 +23,7 @@ section{
     border-radius: 60px;
     padding: 15px;
     width: 300px;
-    height: 500px;
+    height: auto;
     margin: auto;
     border-radius: 30px;
     word-wrap: break-word;
@@ -38,8 +38,8 @@ div{
 }
 
 input[type=button]{
-    width: 90pt;
-    height: 30pt;
+    width: auto;
+    height: 40px;
     margin-left: 80px;
     text-align: center;
     font: bold 20pt black;

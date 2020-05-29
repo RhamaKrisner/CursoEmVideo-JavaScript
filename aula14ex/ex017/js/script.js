@@ -1,14 +1,18 @@
 function calcular(){
   var num = document.getElementById('num')  
+  var tab = document.getElementById('seltab')
   var res = document.getElementById('res')
 
   if(num.value.length == 0){
-      res.innerHTML = 'Insira um valor em Número.'
+      window.alert('Por favor. Digite um número!')
   }else{
       var i = Number(num.value)
       var x = Number(num.value)
+      tab.innerHTML = ''
       for(var i = 1; i <= 10; i++){
-          res.innerHTML +=`${x} x ${i} = ${x*i}<br>`
+          var item = document.createElement('option')
+          item.text =`${x} x ${i} = ${x*i}`
+          tab.appendChild(item)
       }
   }
   
