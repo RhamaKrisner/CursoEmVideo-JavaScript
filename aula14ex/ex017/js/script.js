@@ -1,7 +1,6 @@
 function calcular(){
   var num = document.getElementById('num')  
   var tab = document.getElementById('seltab')
-  var res = document.getElementById('res')
 
   if(num.value.length == 0){
       window.alert('Por favor. Digite um número!')
