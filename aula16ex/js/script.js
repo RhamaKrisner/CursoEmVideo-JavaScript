@@ -1,13 +1,32 @@
-function adicionar(){
-    let num = document.getElementById('num')
-    let tab = document.getElementById('adicionar')
-    if(num.value.length == 0){
-        window.alert('Número não identificado. Adicione um valor')
-    }else{
-        var n = Number(num.value)
-        //tab.innerHTML = ''
-        var item = document.createElement('option')           
-        item.appendChild(item)
+let num = document.getElementById('num')
+let lista = document.getElementById('flista') 
+let res = document.getElementById('res')
+let valores = []
 
+function isNumber(n){
+    if(Number(n) >= 1 && Number(n) <= 100){
+        return true
+    }else{
+        return false
     }
+
+}
+function inLista(n, l){
+    if(l.indexOf(Number(n)) != -1){
+        return true
+    }else{
+        return false
+    }
+}
+
+function adicionar(){
+ if (isNumber(num.value) && !inLista(num.value, valores))   {
+    var item = document.createElement('option')
+    item.text = `${num.value}`
+    lista.appendChild(item)
+ }else{
+     window.alert('Valor inválido ou já encontrado na lista.')
+ }
+
+
 }

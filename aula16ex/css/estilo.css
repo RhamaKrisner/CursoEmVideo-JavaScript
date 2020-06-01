@@ -49,4 +49,8 @@ input[type=number]{
    height: 30px;
 }
 
+select#flista{
+    width: 150px;
+}
+
     
